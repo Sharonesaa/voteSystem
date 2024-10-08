@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nest build && npm run copy:ejs",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "copy:ejs": "if not exist dist\\modules\\mail mkdir dist\\modules\\mail; copyfiles -u 1 src\\modules\\mail\\*.ejs dist\\modules\\mail\\",
+    "copy:ejs": "mkdir -p dist/modules/mail && copyfiles -u 1 src/modules/mail/*.ejs dist/modules/mail/",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
